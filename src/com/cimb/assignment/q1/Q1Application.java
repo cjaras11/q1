@@ -20,7 +20,7 @@ public class Q1Application {
 		int midIndex = prices.length / 2;
 		
 		Thread thread1 = new Thread(new Q1ApplicationThread(prices, 0, midIndex));
-		Thread thread2 = new Thread(new Q1ApplicationThread(prices, midIndex, prices.length));
+		Thread thread2 = new Thread(new Q1ApplicationThread(prices, midIndex, prices.length - 1));
 		
 		List<Thread> threadList = new ArrayList<Thread>();
 		threadList.add(thread1);
